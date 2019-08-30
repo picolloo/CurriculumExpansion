@@ -2,7 +2,6 @@
 const express             = require("express");
 const app                 = express();
 const path                = require("path");
-const bodyparser          = require("body-parser");
 
 // components
 const ioServer            = require("./src/socket/socket")(app);
@@ -12,7 +11,7 @@ const session             = require("./src/session/session");
 const { PORT = 3000 } = process.env;
 
 // middlewares
-app.use(bodyparser.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 app.set("views", path.join(__dirname, "public/views"));
 
