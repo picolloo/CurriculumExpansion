@@ -10,8 +10,8 @@
 // The app instance has a method for each HTTP method with tha same name
 // We want the user to be able to get information from the server in the root URL
 
-// Try to create the pattern that print a message on the console when user access 'http://localhost:3000/'
-// P.S.: the app http method receives and callback function
+// Try to create the pattern that prints a message on the console when user access 'http://localhost:3000/'
+// P.S.: the app http method receives an callback function that will be executed when the user call this endpoint
 
 const express = require('express');
 const app = express();
